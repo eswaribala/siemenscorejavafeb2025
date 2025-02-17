@@ -19,9 +19,8 @@ public class App {
 		Scanner scanner =new Scanner(System.in);
 		byte size=0;
 		size=scanner.nextByte();
-		scanner.nextLine();
+		
 		generateCustomers(size);
-		scanner.close();
 		
 	}
 	
@@ -39,7 +38,7 @@ public class App {
 					faker.name().lastName(),
 					faker.date().birthday()
 					.toInstant().atZone(ZoneId.systemDefault()).toLocalDate(),
-					faker.number().numberBetween(90000000000L, 9999999999L),
+					Long.parseLong(faker.phoneNumber().cellPhone()),
 					faker.internet().emailAddress()					
 					);
 			
