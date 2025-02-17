@@ -12,22 +12,21 @@ public class App {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		//System.out.println("Rocking with Java");		
+		//System.out.println("Rocking with Java");
+		
 		//generate 100 customers and show all the customer details
 		System.out.println("Enter no of customers");
 		Scanner scanner =new Scanner(System.in);
 		byte size=0;
 		size=scanner.nextByte();
 		scanner.nextLine();
-		Customer[] customers=generateCustomers(size);
-		for(Customer customer:customers)
-			System.out.println(customer);
+		generateCustomers(size);
 		scanner.close();
 		
 	}
 	
 	
-	public static Customer[] generateCustomers(byte size) {
+	public static void generateCustomers(byte size) {
 		
 		//create array
 		Customer[] customers=new Customer[size];
@@ -42,10 +41,12 @@ public class App {
 					.toInstant().atZone(ZoneId.systemDefault()).toLocalDate(),
 					faker.number().numberBetween(90000000000L, 9999999999L),
 					faker.internet().emailAddress()					
-					);			
-		}		
+					);
+			
+		}
 		
-		return customers;
+		
+		
 		
 	}
 	
