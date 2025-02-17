@@ -5,8 +5,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Data
-@AllArgsConstructor
-@NoArgsConstructor
+
 
 public class Address {
 	
@@ -15,7 +14,7 @@ public class Address {
 	private String city;
 	private String state;
 	private String countryName;
-	private String zipCode; 
+	private long pinCode; 
 	
 
 }

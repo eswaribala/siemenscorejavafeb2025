@@ -3,7 +3,6 @@ INDEX VERSION 1.134+I:\siemenscorejavafeb2025ws\.metadata\.plugins\org.eclipse.j
 3413270776.index
 297046414.index
 3528570561.index
-1485620148.index
 2880541687.index
 2695545961.index
 1723313414.index

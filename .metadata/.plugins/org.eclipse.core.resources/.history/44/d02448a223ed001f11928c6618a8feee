@@ -19,8 +19,7 @@ public class Customer {
 	private LocalDate dob;
 	private long mobileNo;
 	private String emailId;
-	//has relationship
-	private Address address;
+	
 	
 	
 
