@@ -1,0 +1,5 @@
+package com.siemens.ecommerceapp.models;
+
+public class Customer {
+
+}

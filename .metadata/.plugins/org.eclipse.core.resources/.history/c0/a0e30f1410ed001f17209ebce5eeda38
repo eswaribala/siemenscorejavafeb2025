@@ -1,0 +1,20 @@
+package com.siemens.ecommerceapp.models;
+
+import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
+
+@Getter
+@Setter
+public class Customer {
+	
+	private long customerId;
+	private String firstName;
+	private String lastName;
+	private long mobileNo;
+	private String emailId;
+	
+	
+	
+
+}
