@@ -2,15 +2,10 @@ package com.siemens.ecommerceapp.models;
 
 import java.time.LocalDate;
 
-import lombok.AllArgsConstructor;
 import lombok.Data;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
 
 
 @Data
-@AllArgsConstructor
-@NoArgsConstructor
 public class Customer {
 	
 	private long customerId;
