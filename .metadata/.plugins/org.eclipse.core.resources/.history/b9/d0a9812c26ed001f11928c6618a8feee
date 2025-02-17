@@ -30,24 +30,9 @@ public class App {
 		for(int i=0;i<addressArray.length;i++) {
 			
 			
-			addressArray[i][0]=customers[i].getAddress().getDoorNo();
-			addressArray[i][1]=customers[i].getAddress().getStreetName();
-			addressArray[i][2]=customers[i].getAddress().getCity();
-			addressArray[i][3]=customers[i].getAddress().getState();
-			addressArray[i][4]=customers[i].getAddress().getCountryName();
-			addressArray[i][5]=customers[i].getAddress().getZipCode();
+			for(int j=0;j<addressArray[i].length)
 			
 		}
-		
-		//print two dim
-		for(int i=0;i<addressArray.length;i++) {
-			
-			System.out.println("CustomerId="+customers[i].getCustomerId()+"having address");
-			for(int j=0;j<addressArray[i].length;j++)
-				System.out.print(addressArray[i][j]+"\t");		
-			System.out.println("\n");
-		}
-		
 		
 		
 	}
