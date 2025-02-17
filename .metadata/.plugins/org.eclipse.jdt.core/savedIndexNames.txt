@@ -1,0 +1,3 @@
+INDEX VERSION 1.134+I:\siemenscorejavafeb2025ws\.metadata\.plugins\org.eclipse.jdt.core
+3413270776.index
+1485620148.index
