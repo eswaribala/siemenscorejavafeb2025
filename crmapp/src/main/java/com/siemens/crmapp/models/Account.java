@@ -25,11 +25,10 @@ public class Account {
 			
 			
 		}
-		@Override
-		public String toString() {
+		
+		public String show() {
 			return "Account [AccountNo="+accountNo+" Date of Opening="+dop.toString()+"] Subscription [subscriptionAmount=" + subscriptionAmount + ", expiryDate=" + expiryDate + "]";
 		}
-		
 		
 	
 	}
