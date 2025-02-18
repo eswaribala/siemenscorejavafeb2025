@@ -53,7 +53,7 @@ public class App {
 	}
 	
 	
-	public static Customer[] generateCustomers(byte size) {
+	public static  Customer[] generateCustomers(byte size) {
 		
 		//create array
 		Customer[] customers=new Customer[size];
