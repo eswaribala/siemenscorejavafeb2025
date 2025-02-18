@@ -24,7 +24,7 @@ public class AccountApp {
 		subscription.setExpiryDate(LocalDate.now().plusMonths(6));
 		subscription.setSubscriptionAmount(new Faker().number().numberBetween(2000, 8000));
 
-		System.out.println(subscription);  
+		System.out.println(subscription); 
 		
 	}
 

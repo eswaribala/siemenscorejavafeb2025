@@ -23,8 +23,15 @@ public class Account {
 		public Subscription() {
 			subscriptionId++;
 			
+			
+		}
+		@Override
+		public String toString() {
+			return "Account [AccountNo="+accountNo+" Date of Opening="+dop.toString()+"] Subscription [subscriptionAmount=" + subscriptionAmount + ", expiryDate=" + expiryDate + "]";
 		}
 		
+		
+	
 	}
 
 }
