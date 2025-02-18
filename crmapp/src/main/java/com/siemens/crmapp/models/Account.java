@@ -19,6 +19,7 @@ public class Account {
 	public class Subscription{
 		public static long subscriptionId=0;
 		private long subscriptionAmount;
+		private LocalDate dop;
 		private LocalDate expiryDate;
 		public Subscription() {
 			subscriptionId++;
@@ -27,7 +28,7 @@ public class Account {
 		}
 		
 		public String show() {
-			return "Account [AccountNo="+accountNo+" Date of Opening="+dop.toString()+"] Subscription [subscriptionAmount=" + subscriptionAmount + ", expiryDate=" + expiryDate + "]";
+			return "Account [AccountNo="+accountNo+" Date of Opening="+Account.this.dop.toString()+"] Subscription [subscriptionAmount=" + subscriptionAmount + ", expiryDate=" + expiryDate + ",Subscription Date of Opening="+dop.toString()+"]";
 		}
 		
 	

@@ -18,12 +18,12 @@ public class AccountApp {
 		Account account=new Account();
 		account.setAccountNo(new Random().nextLong(100000));
 		account.setAccountType(AccountType.Basic);
-		account.setDop(LocalDate.now(ZoneId.of("Europe/Zurich")));
+		account.setDop(LocalDate.now().minusYears(1));
 		
 		Subscription subscription=account.new Subscription();
 		subscription.setExpiryDate(LocalDate.now().plusMonths(6));
 		subscription.setSubscriptionAmount(new Faker().number().numberBetween(2000, 8000));
-
+        subscription.setDop(LocalDate.now());    
 		System.out.println(subscription.show()); 
 		
 	}
