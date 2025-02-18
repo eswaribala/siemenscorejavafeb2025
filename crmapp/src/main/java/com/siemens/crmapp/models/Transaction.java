@@ -8,6 +8,8 @@ public class Transaction {
 	private long transactionId;
 	private TransactionMode transactionMode;
 	private static int counter=0;
+	//constant
+	public static final float serviceTax=0.2f;
 	//access specifier private
 	private Transaction() {
 		

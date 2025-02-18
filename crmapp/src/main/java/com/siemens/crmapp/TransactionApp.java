@@ -13,6 +13,8 @@ public class TransactionApp {
 		Transaction transaction1=Transaction.createTransaction();
 		transaction1.setTransactionId(new Random().nextLong());
 		transaction1.setTransactionMode(TransactionMode.CARD);
+		//Transaction.serviceTax+=0.1;
+		System.out.println("Service Tax="+Transaction.serviceTax);
 	
 		Transaction transaction2=Transaction.createTransaction();
 		transaction2.setTransactionId(new Random().nextLong());
