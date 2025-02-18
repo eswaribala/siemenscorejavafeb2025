@@ -13,7 +13,7 @@ import lombok.experimental.SuperBuilder;
 @NoArgsConstructor
 @SuperBuilder
 @EqualsAndHashCode(callSuper = true)
-public class Customer extends Person{
+public abstract class Customer extends Person{
 	
 	protected long customerId;
 	protected String password;

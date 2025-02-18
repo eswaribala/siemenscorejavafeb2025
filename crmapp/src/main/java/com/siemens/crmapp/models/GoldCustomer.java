@@ -14,4 +14,10 @@ import lombok.experimental.SuperBuilder;
 public class GoldCustomer extends Customer{
 
 	private boolean annualFeeWaiveOff;
+
+	@Override
+	public void computeDiscount() {
+		// TODO Auto-generated method stub
+		
+	}
 }

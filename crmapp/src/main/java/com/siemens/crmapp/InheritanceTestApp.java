@@ -4,14 +4,19 @@ import java.time.ZoneId;
 import java.util.Random;
 
 import com.github.javafaker.Faker;
+import com.siemens.crmapp.models.GoldCustomer;
+import com.siemens.crmapp.models.Person;
 import com.siemens.crmapp.models.SilverCustomer;
+import com.siemens.crmapp.models.SilverCustomerGenerator;
 
 public class InheritanceTestApp {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
+		
+		
        Faker faker=new Faker();
-		SilverCustomer silverCustomer=SilverCustomer.builder()
+		SilverCustomerGenerator silverCustomer=SilverCustomerGenerator.builder()
 				.adharCardNo(faker.number().numberBetween(1111111111, 99999999999L))
 				.firstName(faker.name().firstName())
 				.lastName(faker.name().lastName())
@@ -22,6 +27,8 @@ public class InheritanceTestApp {
 				.build();
 
 		System.out.println(silverCustomer);
+		System.out.println("OTP="+silverCustomer.getOTP());
+
 		
 	}
 

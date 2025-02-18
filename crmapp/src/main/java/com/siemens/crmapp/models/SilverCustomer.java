@@ -24,6 +24,12 @@ public class SilverCustomer extends Customer{
 				+ dob + "]";
 	}
 
+	@Override
+	public void computeDiscount() {
+		// TODO Auto-generated method stub
+		
+	}
+
 	
 
 	
