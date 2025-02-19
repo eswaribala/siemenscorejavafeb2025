@@ -93,15 +93,67 @@ public class ProductJDBCImpl implements ProductJDBCDAO
 	}
 
 	@Override
-	public Product getProductById(long productId) {
+	public Product getProductById(long productId) throws SQLException, ClassNotFoundException {
 		// TODO Auto-generated method stub
-		return null;
+		String query=resourceBundle.getString("selectProductById");
+		Product product=null;
+		try {
+		connection=MySQLHelper.getConnection();
+		if(connection!=null)
+		{
+			preparedStatement=connection.prepareStatement(query);
+			preparedStatement.setLong(1, productId);
+		
+			resultSet=preparedStatement.executeQuery();
+			while(resultSet.next()) {
+				product=new Product(resultSet.getLong(1)
+						,resultSet.getString(2),
+						resultSet.getDouble(3),
+						resultSet.getDate(4).toLocalDate(),
+						resultSet.getDate(5).toLocalDate(),
+						resultSet.getLong(6));
+				
+			}
+			return product;
+		}else
+			return null;
+		}
+		finally {
+			connection.close();
+		}
+		// TODO Auto-generated method stub
+		
 	}
 
 	@Override
-	public boolean deleteProductById(long productId) {
+	public boolean deleteProductById(long productId) throws SQLException, ClassNotFoundException {
 		// TODO Auto-generated method stub
-		return false;
+		// TODO Auto-generated method stub
+				String query=resourceBundle.getString("deleteProductById");
+				Product product=null;
+				int rows=0;
+				try {
+				connection=MySQLHelper.getConnection();
+				if(connection!=null)
+				{
+					preparedStatement=connection.prepareStatement(query);
+					preparedStatement.setLong(1, productId);
+				
+					rows=preparedStatement.executeUpdate();
+					if(rows>0)
+						return true;
+					else
+						return false;
+						
+					
+				}else
+					return false;
+				}
+				finally {
+					connection.close();
+				}
+				// TODO Auto-generated method stub
+				
 	}
 
 }

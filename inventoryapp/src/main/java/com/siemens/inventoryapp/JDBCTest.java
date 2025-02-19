@@ -24,8 +24,11 @@ public class JDBCTest {
 		try {
 			ProductJDBCDAO productJDBCDao=new ProductJDBCImpl();
 			//System.out.println(productJDBCDao.addProduct(product));
-			for(Product product : productJDBCDao.getAllProducts())
-				System.out.println(product);
+			/*
+			 * for(Product product : productJDBCDao.getAllProducts())
+			 * System.out.println(product);
+			 */
+			System.out.println(productJDBCDao.deleteProductById(7221));
 			
 		} catch (ClassNotFoundException | SQLException e) {
 			// TODO Auto-generated catch block

@@ -11,9 +11,9 @@ public interface ProductJDBCDAO {
 	
 	List<Product> getAllProducts()throws SQLException,ClassNotFoundException;
 	
-	Product getProductById(long productId);
+	Product getProductById(long productId) throws SQLException,ClassNotFoundException;
 	
-	boolean deleteProductById(long productId);
+	boolean deleteProductById(long productId) throws SQLException,ClassNotFoundException;
 	
 
 }
