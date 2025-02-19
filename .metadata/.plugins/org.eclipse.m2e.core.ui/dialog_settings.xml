@@ -2,6 +2,7 @@
 <section name="Workbench">
 	<section name="MavenProjectWizardLocationPage">
 		<list key="location">
+			<item value="I:\siemenscorejavafeb2025ws\ecommerceapp"/>
 		</list>
 		<list key="projectNameTemplate">
 			<item value="[artifactId]"/>
@@ -48,6 +49,7 @@
 		<list key="name">
 		</list>
 		<list key="artifactId">
+			<item value="crmapp"/>
 			<item value="ecommerceapp"/>
 		</list>
 		<list key="projectNameTemplate">
