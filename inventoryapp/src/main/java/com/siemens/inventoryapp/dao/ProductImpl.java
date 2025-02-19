@@ -2,16 +2,17 @@ package com.siemens.inventoryapp.dao;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Vector;
 
 import com.siemens.inventoryapp.models.Product;
 
 public class ProductImpl implements ProductDao{
 	
-	private List<Product> productList;
+	private Vector<Product> productList;
 	
 	
 	public ProductImpl() {
-	  this.productList=new ArrayList<Product>();
+	  this.productList=new Vector<Product>();
 	}
 
 	@Override
@@ -22,7 +23,7 @@ public class ProductImpl implements ProductDao{
 	}
 
 	@Override
-	public List<Product> getAllProducts() {
+	public Vector<Product> getAllProducts() {
 		// TODO Auto-generated method stub
 		//sort the products
 		

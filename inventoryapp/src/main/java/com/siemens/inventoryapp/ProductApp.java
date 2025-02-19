@@ -1,6 +1,7 @@
 package com.siemens.inventoryapp;
 import java.time.LocalDate;
 import java.time.ZoneId;
+import java.util.Enumeration;
 
 import com.github.javafaker.Faker;
 import com.siemens.inventoryapp.dao.*;
@@ -28,9 +29,12 @@ public class ProductApp {
 		}
 		
 		//display the sorted products
-		for(Product product1: productDao.getAllProducts())
-			System.out.println(product1);
+		//for(Product product1: productDao.getAllProducts())
+			//System.out.println(product1);
 		
+		Enumeration<Product> products=productDao.getAllProducts().elements();
+		while(products.hasMoreElements())
+			System.out.println(products.nextElement());
 
 	}
 
