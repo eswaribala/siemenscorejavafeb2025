@@ -6,6 +6,8 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.time.ZoneId;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.ResourceBundle;
 
@@ -17,6 +19,7 @@ public class ProductJDBCImpl implements ProductJDBCDAO
 	
 	private static Connection connection;
 	private PreparedStatement preparedStatement;
+	private Statement statement;
 	private ResultSet resultSet;
 	private ResourceBundle resourceBundle;
 	
@@ -56,9 +59,37 @@ public class ProductJDBCImpl implements ProductJDBCDAO
 	}
 
 	@Override
-	public List<Product> getAllProducts() {
+	public List<Product> getAllProducts() throws SQLException, ClassNotFoundException {
 		// TODO Auto-generated method stub
-		return null;
+		String query=resourceBundle.getString("selectAllProducts");
+		Product product=null;
+		List<Product>productList=new ArrayList<>();
+		try {
+		connection=MySQLHelper.getConnection();
+		if(connection!=null)
+		{
+			statement=connection.createStatement();
+			resultSet=statement.executeQuery(query);
+			while(resultSet.next()) {
+				product=new Product(resultSet.getLong(1)
+						,resultSet.getString(2),
+						resultSet.getDouble(3),
+						resultSet.getDate(4).toLocalDate(),
+						resultSet.getDate(5).toLocalDate(),
+						resultSet.getLong(6));
+				productList.add(product);
+			}
+			return productList;	
+		}else
+			return null;
+		
+		}
+		finally {
+			connection.close();
+		}
+		// TODO Auto-generated method stub
+		
+	
 	}
 
 	@Override

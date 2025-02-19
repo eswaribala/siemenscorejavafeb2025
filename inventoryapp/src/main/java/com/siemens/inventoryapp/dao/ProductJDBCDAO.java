@@ -9,7 +9,7 @@ public interface ProductJDBCDAO {
 	
 	Product addProduct(Product product) throws SQLException,ClassNotFoundException;
 	
-	List<Product> getAllProducts();
+	List<Product> getAllProducts()throws SQLException,ClassNotFoundException;
 	
 	Product getProductById(long productId);
 	
