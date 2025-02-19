@@ -11,6 +11,11 @@ public class ConcurrentThread {
 			seq[i]=new ConncurrentThreadSeqGenerator("Thread-"+i);
 			System.out.println(seq[i].getName());
 		    seq[i].start();
+		    
+		    if(i%2==0)
+		    	seq[i].setPriority(Thread.MAX_PRIORITY);
+		    else
+		    	seq[i].setPriority(Thread.MIN_PRIORITY);
 		   
 		    try {
 				seq[i].join();
